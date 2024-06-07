@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --primary-colorOne:hsl(225, 100%, 94%);
+    --primary-colorTwo:hsl(245, 75%, 52%);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue:hsl(224, 23%, 55%);
+    --Darkblue:hsl(223, 47%, 23%);
+
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  min-height: 100vh;
+  background-image: url(pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--primary-colorOne);
+  font-size: 1rem;
+  
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 4rem auto;
+   max-width: 28.125rem;
+   background: #fff;
+   border-radius: 1.25rem;
+   overflow: hidden;
+   
+}
+
+.text-content{
+    padding: 7%;
+    text-align: center;
+}
+
+.title{
+    color: var(--Darkblue);
+    font-weight:900;
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.text-content p.subtitles{
+    color: var(--Desaturatedblue);
+    margin-bottom: 1.563rem;
+}
+
+.plan-box{
+    background-color: var(--Verypaleblue);
+    border-radius: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.563rem ;
+}
+
+.plan-box-left{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.plan-box-left div{
+    margin-left: 1.25rem;
+}
+
+.plan-box-left div h5{
+    font-weight: 900;
+    font-size: 0.938rem;
+    color: var(--Darkblue);
+}
+.plan-box-left div p{
+   
+    font-size:0.875rem;
+    color:var(--Desaturatedblue);
+}
+
+.plan-box a{
+    font-weight: 900;
+    text-decoration: underline;
+    transition: color .3s ease;
+    
+}
+
+.plan-box a:hover{
+   
+    text-decoration: none;
+    color: var(--Desaturatedblue);
+    
+}
+
+.plan-box a:active{
+    color: var(--primary-colorOne);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+a.proceed-btn{
+display: block;
+text-decoration: none;
+color: #fff;
+background-color: var(--primary-colorTwo);
+padding: 1.25rem 0;
+border-radius: 0.75rem;
+margin: 1.875rem 0;
+transition: background-color 0.3s ease;
+}
+
+a.proceed-btn:hover{
+    background-color: var(--Desaturatedblue);
+}
+
+a.cancel-btn{
+    color: var(--Desaturatedblue);
+    font-weight: 900;
+    transition: color .3s ease;
+}
+a.cancel-btn:hover{
+    color: var(--Darkblue);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Query */
+
+@media screen and (max-width:26.563rem) {
+
+    body{
+        background-image: url(pattern-background-mobile.svg);
+        font-size: 0.875rem;
+    }
+    .container{
+        max-width: 87%;
+    }
+
+    .title{
+        font-size: 1.438rem;
+    }
+
+    div.plan-box{
+        padding: .75rem;
+    }
+
+    .plan-box-left div{
+        margin-left: .625rem;
+    }
+
+    a.proceed-btn{
+        font-size: .75rem;
+    }
+
+    a.proceed-btn,
+    a.cancel-btn,
+    .plan-box a{
+        font-size: 0.813rem;
+    }
+
+    .text-content{
+        padding: 9% 7%;
+    }
+}
